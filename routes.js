@@ -1,6 +1,6 @@
 const helloController = (data, callback) => {
   callback(200, {
-    data: 'Welcome to hello world'
+    message: 'Welcome to the world of node apis...'
   });
 }
 
