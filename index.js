@@ -16,10 +16,6 @@ const server = http.createServer((req, res) => {
   const path = parsedUrl.pathname;
   const trimmedPath = path.replace(/^\/+|\/+$/g, '');
 
-  console.log(`Trimmed path: `, trimmedPath);
-  console.log(`Trimmed path: `, routes[trimmedPath]);
-  console.log(`Type of controller: `, typeof(routes[trimmedPath]));
-
   const decoder = new StringDecoder('utf-8');
   let buffer = '';
 

@@ -1,4 +1,5 @@
 const helloController = (data, callback) => {
+  console.log(data);
   callback(200, {
     message: 'Welcome to the world of node apis...'
   });
