@@ -36,7 +36,7 @@ const server = http.createServer((req, res) => {
     requestData = { ...requestData, payload: buffer };
 
     // pass the request data to the controller and return response
-    const controller = typeof (routes[trimmedPath]) == 'function' ? routes[trimmedPath] : routes.notFound;
+    const controller = routes[trimmedPath] ?? routes.notFound;
 
     controller(requestData, (statusCode, payload) => {
       statusCode = typeof (statusCode) == 'number' ? statusCode : 200;
